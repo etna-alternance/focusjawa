@@ -1,0 +1,21 @@
+.card {
+	padding: 10px;
+	margin-bottom: 5px;
+	background-color: #fff;
+	border: 1px solid rgba( 0, 0, 0, .1 );
+	border-radius: var( --borderRadius );
+}
+.card .bottom {
+	margin-top: 10px;
+	display: flex;
+}
+.card .bottom > div {
+	flex: 1;
+}
+.card .cardId {
+	font-weight: bold;
+}
+.card .bottom div:last-child {
+	font-size: .7em;
+	text-align: right;
+}

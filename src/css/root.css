@@ -1,0 +1,36 @@
+:root {
+	--borderRadius: 4px;
+	--project-pad: 10px;
+	--list-marginSide: calc( var( --project-pad ) / 2 );
+
+	--icon-marginR: 4px;
+
+	--highlight-padding: 4px 6px;
+	--highlight-color: #fff;
+	--highlight-bg: rgba( 0, 0, 0, .3 );
+
+	--modal-dur: .2s;
+	--modal-bg: #e9ebee;
+	--modal-radius: var( --borderRadius );
+	--modal-overlay-bg: rgba( 255, 255, 255, .6 );
+
+	--modal-window-padding: 20px;
+	--modal-elem-marginB: 10px;
+	--modal-elem-bg: #fff;
+
+
+	--modalTitle-ftSize: 1.5em;
+
+	--modalHead-highlight-margin: 0 2px 2px;
+	--modalHead-padding: 10px;
+	--modalHead-fontSize: .7em;
+
+	--modalBody-highlight-bg: rgba( 0, 0, 0, .2 );
+	--modalMsg-padding: 0 20px;
+	--modalMsg-borderColor: #dddfe2;
+	--modalMsg-notice-bg: rgba( 255, 255, 255, .6 );
+	--modalMsg-notice-color: #888;
+	--modalMsgCnt-fontSize: .8em;
+	--modalMsgInfo-padding: 5px 10px;
+	--modalMsgAuthor-color: rgba( 0, 0, 255, .1 );
+}

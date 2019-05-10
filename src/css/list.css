@@ -1,0 +1,19 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	min-width: 330px;
+	max-width: 330px;
+	margin: 0 var( --list-marginSide );
+	background-color: rgba( 0, 0, 0, .05 );
+	border-radius: var( --borderRadius );
+}
+.listHeader {
+	width: 100%;
+	padding: 10px 18px;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+.listCards {
+	padding: 0 10px 10px;
+	overflow-y: auto;
+}

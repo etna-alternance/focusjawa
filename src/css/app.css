@@ -1,0 +1,53 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica Neue;
+	font-size: 15px;
+	color: #666;
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+#menu {
+	height: 60px;
+	background: tomato;
+}
+
+#project {
+	flex: 1;
+	display: flex;
+	overflow-x: auto;
+	padding: var( --project-pad ) var( --list-marginSide );
+}
+#project:after {
+	display: inline-block;
+	min-width: var( --list-marginSide );
+	content: "";
+}
+
+.highlight {
+	display: inline-block;
+	padding: var( --highlight-padding );
+	border-radius: var( --borderRadius );
+	background-color: var( --highlight-bg );
+	font-size: inherit;
+	font-weight: 500;
+	color: var( --highlight-color );
+}
+
+.highlight:before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 600;
+	font-size: var( --icon-fontSize );
+	margin-right: var( --icon-marginR );
+	font-style: initial;
+}
+
+.tag:before { content: "\f02b"; }
+.user:before { content: "\f007"; }
+.time:before { content: "\f017"; }

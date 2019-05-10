@@ -1,0 +1,77 @@
+#modal {
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background-color: var( --modal-overlay-bg );
+	transition: var( --modal-dur );
+	transition-property: visibility, opacity;
+}
+#modal:not( .modal-show ) {
+	opacity: 0;
+	visibility: hidden;
+}
+
+#modalWindow {
+	overflow: hidden;
+	overflow-y: auto;
+	min-width: 50%;
+	max-width: 60%;
+	height: 70%;
+	padding: var( --modal-window-padding );
+	box-sizing: border-box;
+	border-radius: var( --modal-radius );
+	background-color: var( --modal-bg );
+	box-shadow: 0 0 50px #b5b5b5;
+}
+
+#modalTitle {
+	font-size: var( --modalTitle-ftSize );
+	font-weight: bold;
+}
+
+#modalHead {
+	padding: var( --modalHead-padding );
+	margin-bottom: var( --modal-elem-marginB );
+	font-size: var( --modalHead-fontSize );
+}
+
+#modalHead .label {
+	margin: 6px 0 2px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#modalHead .highlight { margin: var( --modalHead-highlight-margin ); }
+#modalBody .highlight { background-color: var( --modalBody-highlight-bg ); }
+#modalBody p { margin: 13px 0; }
+#modalBody ul { margin: 10px 0; }
+
+.modalMsg {
+	padding: var( --modalMsg-padding );
+	border: 1px solid var( --modalMsg-borderColor );
+	border-radius: var( --borderRadius );
+	background-color: var( --modal-elem-bg );
+}
+.modalMsg:not(:last-child) {
+	margin-bottom: var( --modal-elem-marginB );
+}
+.modalMsg.notice {
+	color: var( --modalMsg-notice-color );
+	background-color: var( --modalMsg-notice-bg );
+}
+
+.modalMsgCnt {
+	font-size: var( --modalMsgCnt-fontSize );
+}
+.modalMsgInfo {
+	padding: var( --modalMsgInfo-padding );
+	font-size: var( --modalHead-fontSize );
+	font-style: italic;
+	text-align: right;
+	border-top: 1px solid #dbdde0;
+}

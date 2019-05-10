@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FocusJAWA</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="src/css/root.css">
+	<link rel="stylesheet" type="text/css" href="src/css/app.css">
+	<link rel="stylesheet" type="text/css" href="src/css/modal.css">
+	<link rel="stylesheet" type="text/css" href="src/css/list.css">
+	<link rel="stylesheet" type="text/css" href="src/css/card.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script type="text/javascript"> function lg( a ) { console.log.apply( console, arguments ); return a; } </script>
+</head>
+<body>
+	<!-- <div id="menu"></div> -->
+	<div id="project"></div>
+
+	<!-- template -->
+	<div class="list" tabindex="1">
+		<div class="listHeader">
+			<span class="listTitle"></span>
+			<span class="listCounter"></span>
+		</div>
+		<div class="listCards"></div>
+	</div>
+	<div class="card" tabindex="2">
+		<div class="cardTitle"></div>
+		<div class="bottom">
+			<div class="cardId"></div>
+			<div><span class="cardTtl highlight time"></span></div>
+		</div>
+	</div>
+
+	<!-- modal -->
+	<div id="modal">
+		<div id="modalWindow" tabindex="-1">
+			<div id="modalTitle"></div>
+			<div id="modalHead">
+				<div class="label">Tags</div>
+				<div id="modalTags"></div>
+				<div class="label">Author</div>
+				<div id="modalAuthor"></div>
+				<div class="label">Affected to</div>
+				<div id="modalAffectedTo"></div>
+				<div class="label">Created At</div>
+				<div id="modalCreatedAt"></div>
+			</div>
+			<div id="modalBody"></div>
+		</div>
+	</div>
+	<div class="modalMsg">
+		<div class="modalMsgCnt"></div>
+		<div class="modalMsgInfo">
+			<span class="modalMsgAuthor highlight user"></span>
+			<span class="modalMsgCreatedAt highlight time"></span>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.js"></script>
+	<script type="text/javascript" src="src/js/init.js"></script>
+	<script type="text/javascript" src="src/js/ticketsApi.js"></script>
+	<script type="text/javascript" src="src/js/modal.js"></script>
+	<script type="text/javascript" src="src/js/card.js"></script>
+	<script type="text/javascript" src="src/js/list.js"></script>
+	<script type="text/javascript" src="src/js/run.js"></script>
+</body>
+</html>
