@@ -21,6 +21,7 @@ FJ.modal = {
 			this.window = qs( "Window" );
 			this.els.body = qs( "Body" );
 			this.els.tags = qs( "Tags" );
+			this.els.id = qs( "Id" );
 			this.els.title = qs( "Title" );
 			this.els.author = qs( "Author" );
 			this.els.created = qs( "CreatedAt" );
@@ -44,7 +45,8 @@ FJ.modal = {
 	_open( ticket ) {
 		this.isOpen = true;
 		this.clRoot.add( "modal-show" );
-		this._setTitle( ticket.id, ticket.title );
+		this._setId( ticket.id );
+		this._setTitle( ticket.title );
 		this._setTags( ticket.tags );
 		this._setAuthor( ticket.creator.login );
 		this._setAffectedTo( ticket.users );
@@ -63,8 +65,12 @@ FJ.modal = {
 		this.resolve( true );
 	},
 
-	_setTitle( id, t ) {
-		this.els.title.innerText = `#${id} ${t}`;
+	_setId( id ) {
+		this.els.id.href += id;
+		this.els.id.innerText += `#${id}`;
+	},
+	_setTitle( t ) {
+		this.els.title.innerHTML += t;
 	},
 	_setTags( tags ) {
 		tags.forEach( t => this.els.tags.append( newHighlight( t, "tag" ) ) );

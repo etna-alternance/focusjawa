@@ -30,6 +30,12 @@
 	box-shadow: 0 0 50px #b5b5b5;
 }
 
+#modalId {
+	display: block;
+	margin-bottom: 5px;
+	text-align: right;
+}
+
 #modalTitle {
 	font-size: var( --modalTitle-ftSize );
 	font-weight: bold;
