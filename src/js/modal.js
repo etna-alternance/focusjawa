@@ -13,8 +13,7 @@ FJ.modal = {
 
 	_init() {
 		if ( !this._ready ) {
-			const qs = s => document.querySelector( `#modal${ s }` ),
-				opt = { simplifiedAutoLink: true };
+			const qs = s => document.querySelector( `#modal${ s }` );
 
 			this.els = {};			
 			this.root = qs( "" );
@@ -35,9 +34,6 @@ FJ.modal = {
 				e.keyCode === 27 && this._close();
 				e.stopPropagation();
 			};
-
-
-			this.mdToHTML = new showdown.Converter( opt );
 			this._ready = true;
 		}
 	},
@@ -92,7 +88,7 @@ FJ.modal = {
 			const el = this.templateMsg.cloneNode( true );
 
 			el.classList.add( m.type );
-			qs( el, "MsgCnt" ).innerHTML = this.mdToHTML.makeHtml( m.content );
+			qs( el, "MsgCnt" ).innerHTML = FJ.sd.run( m.content );
 			qs( el, "MsgAuthor" ).innerText = m.author.login;
 			qs( el, "MsgCreatedAt" ).innerText = m.created_at;
 			this.els.body.append( el );
