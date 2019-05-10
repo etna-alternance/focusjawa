@@ -10,7 +10,7 @@ function newHighlight( cnt, icn ) {
 
 window.FJ = {};
 
-FJ.modal = {};
+FJ.modal =
+FJ.project =
 FJ.ticketsapi = {};
-
 
