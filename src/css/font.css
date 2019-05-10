@@ -12,5 +12,10 @@
 
 @font-face {
 	font-family: "Montserrat";
-	src: url( "../assets/Montserrat-Regular.ttf" );
+	src: url( "../assets/Montserrat-Medium.ttf" );
+}
+
+@font-face {
+	font-family: "FontAwesome";
+	src: url( "../assets/fontawesome-solid.woff2" ) format( "woff2" );
 }

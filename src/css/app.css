@@ -41,7 +41,7 @@ body {
 }
 
 .highlight:before {
-	font-family: "Font Awesome 5 Free";
+	font-family: "FontAwesome";
 	font-weight: 600;
 	font-size: var( --icon-fontSize );
 	margin-right: var( --icon-marginR );

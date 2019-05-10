@@ -3,6 +3,7 @@
 	--project-pad: 10px;
 	--list-marginSide: calc( var( --project-pad ) / 2 );
 
+	--icon-fontSize: 10px;
 	--icon-marginR: 4px;
 
 	--highlight-padding: 4px 6px;
