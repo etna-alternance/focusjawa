@@ -13,7 +13,8 @@ FJ.modal = {
 
 	_init() {
 		if ( !this._ready ) {
-			const qs = s => document.querySelector( `#modal${ s }` );
+			const qs = s => document.querySelector( `#modal${ s }` ),
+				opt = { simplifiedAutoLink: true };
 
 			this.els = {};			
 			this.root = qs( "" );
@@ -34,7 +35,8 @@ FJ.modal = {
 				e.stopPropagation();
 			};
 
-			this.mdToHTML = new showdown.Converter();
+
+			this.mdToHTML = new showdown.Converter( opt );
 			this._ready = true;
 		}
 	},
