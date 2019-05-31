@@ -1,4 +1,4 @@
-"use strict";
+import showdown from "showdown";
 
 FJ.sd = {
 	run( o ) {
@@ -22,4 +22,4 @@ FJ.sd = {
 			replace: "$1 target='_blank'$2"
 		} ];
 	}
-}
+};

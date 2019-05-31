@@ -1,6 +1,6 @@
-"use strict";
+import Card from "./card";
 
-class List {
+export default class List {
 	constructor ( title, filters=[] ) {
 		const root = List.template.cloneNode( true ),
 			qs = n => root.querySelector( `.list${n}` );

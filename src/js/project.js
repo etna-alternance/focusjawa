@@ -1,5 +1,3 @@
-"use strict";
-
 FJ.project = {
 	_init() {
 		this.rootElement = document.querySelector( "#project" );
@@ -14,4 +12,4 @@ FJ.project = {
 	updateAll() {
 		this.lists.forEach( l => l.update() );
 	}
-}
+};

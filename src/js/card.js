@@ -1,6 +1,4 @@
-"use strict";
-
-class Card {
+export default class Card {
 	constructor( id, title, ttl ) {
 		const root = Card.template.cloneNode( true ),
 			qs = n => root.querySelector( `.card${n}` );
@@ -28,7 +26,7 @@ class Card {
 		this.ttl = ttl;
 		this._elTtl.innerText = ttl;
 	}
-	click( e ) {
+	click() {
 		FJ.ticketsapi.getTicketById( this.id )
 			.then( ticket => FJ.modal.show.call( FJ.modal, ticket ) );
 	}

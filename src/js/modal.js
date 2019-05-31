@@ -1,5 +1,3 @@
-"use strict";
-
 FJ.modal = {
 	show( data ) {
 		this.isOpen = true;
@@ -15,7 +13,7 @@ FJ.modal = {
 		if ( !this._ready ) {
 			const qs = s => document.querySelector( `#modal${ s }` );
 
-			this.els = {};			
+			this.els = {};
 			this.root = qs( "" );
 			this.window = qs( "Window" );
 			this.els.body = qs( "Body" );
@@ -48,7 +46,7 @@ FJ.modal = {
 		this._setAffectedTo( ticket.users );
 		this._setCreatedAt( ticket.created_at );
 		this._setBody( ticket.messages );
-		setTimeout( () => this.window.focus() , 250 );
+		setTimeout( () => this.window.focus(), 250 );
 		return new Promise( res => this.resolve = res )
 			.then( val => {
 				this.root.classList.remove( "modal-show" );
@@ -96,9 +94,9 @@ FJ.modal = {
 	},
 
 	_emptyCnt() {
-		Object.values( this.els ).forEach( el => { el.innerHTML = "" } );
+		Object.values( this.els ).forEach( el => el.innerHTML = "" );
 	}
-}
+};
 
 FJ.modal.templateMsg = document.querySelector( ".modalMsg" );
 FJ.modal.templateMsg.remove();
